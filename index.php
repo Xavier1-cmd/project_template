@@ -45,6 +45,37 @@ $total_pages = ceil($total_records / $pageRow_records);
 <body>
   <section id="header">
     <div class="main_background" style="background: url(https://img.cloudimg.in/uploads/shops/1840/theme/43/43e429041e4b3946a481efd490ef1bcf.jpg?v=202407120420) center center  repeat  #000000 ;position:fixed;">
+      <nav class="js_mobile_second_menu el_nav_bar second">
+        <ul class="el_nav_items d-flex list-unstyled mb-0">
+          <!-- 漢堡堡 -->
+          <li>
+            <div class="d-flex align-items-center justify-content-center">
+              <button id="js_nav_toggle" class="js_mobile_menu btn el_btn el_nav_btn el_btn_hamburger d-flex flex-column align-items-center el_rounded_0 border-0" type="button" style="color: #808080;">
+                <i class="icon-new_menu md-20"></i>
+              </button>
+            </div>
+          </li>
+          <li class="el_nav_fn d-grid">
+            <!-- 購物車按鈕 -->
+            <button class="js_cart_toggle js_hover_effect btn el_btn el_nav_btn el_btn_cart position-relative mr-0  " type="button" style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-hover-style="background-color: #2B3033;border-color:#2B3033;color: #ffffff;" target-action="right-float-menu-button">
+              <span class="d-flex justify-content-center">
+                <i class="icon-new_cart" style="color: #ffffff;"></i>
+                <small class="el_cart_num el_rounded_pill position-absolute d-block" style="background-color: #C14848;">
+                  <span class="position-relative js_cart_number">0</span>
+                </small>
+              </span>
+            </button>
+            <!-- 桌機版_搜尋bar -->
+            <div class="el_nav_search js_nav_search position-relative">
+              <input class="btn el_btn el_nav_btn el_btn_search text-left js_hover_effect" id="form_search" type="text" placeholder="商品搜尋" style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-hover-style="background-color: #2B3033;border-color:#2B3033;color: #ffffff;">
+              <label class="el_search_icon d-flex position-absolute mb-0" for="form_search" style="">
+                <i class="icon-new_search md-24" style="color: #ffffff;"></i>
+              </label>
+              <!-- 有關鍵字顯示，則加入.active -->
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
     <div class="function_block">
       <header class="function_area">
@@ -250,6 +281,16 @@ $total_pages = ceil($total_records / $pageRow_records);
         </li>
       </ul>
     </nav>
+
+    <div class="el_logo_area d-flex justify-content-center align-items-center" style="background-color: rgba(255, 255, 255, 0);">
+      <a class="d-block" href="https://store.mrjoe.com.tw/">
+        <figure class="el_logo_image mb-0">
+          <img class="el_logo_desktop mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/b15bd2600e0a4849bff0937ad7f577a1.png" alt="">
+          <img class="el_logo_mobile mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/edc04218e251dd094a3a595a079e16ef.png" width="0" alt="">
+        </figure>
+      </a>
+    </div>
+
   </section>
 
   <section id="content">
@@ -717,7 +758,7 @@ $total_pages = ceil($total_records / $pageRow_records);
                                     </ul>
                                   </div>
 
-                                  <div class="el_link_items d-grid mb-0">
+                                  <!-- <div class="el_link_items d-grid mb-0">
                                     <input id="el_ft_link_pc4" class="el_link_ipt d-none" type="checkbox">
                                     <label for="el_ft_link_pc4" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
                                       <a href="https://store.mrjoe.com.tw/faq#members_redeem" style="color: #ffffff;">
@@ -729,7 +770,7 @@ $total_pages = ceil($total_records / $pageRow_records);
                                         <a href="https://store.mrjoe.com.tw/faq#policy" style="color: #ffffff;">隱私權條款</a>
                                       </li>
                                     </ul>
-                                  </div>
+                                  </div> -->
 
                                 </div>
                               </div>
@@ -925,7 +966,7 @@ $total_pages = ceil($total_records / $pageRow_records);
                                     </ul>
                                   </div>
 
-                                  <div class="el_link_items d-grid mb-0">
+                                  <!-- <div class="el_link_items d-grid mb-0">
                                     <input id="el_ft_link_mobile4" class="el_link_ipt d-none" type="checkbox">
                                     <label for="el_ft_link_mobile4" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
                                       <a href="https://store.mrjoe.com.tw/faq#members_redeem" style="color: #ffffff;">
@@ -937,7 +978,7 @@ $total_pages = ceil($total_records / $pageRow_records);
                                         <a href="https://store.mrjoe.com.tw/faq#policy" style="color: #ffffff;">隱私權條款</a>
                                       </li>
                                     </ul>
-                                  </div>
+                                  </div> -->
 
                                 </div>
                               </div>
@@ -994,7 +1035,7 @@ $total_pages = ceil($total_records / $pageRow_records);
                           </li>
                         </ul>
                       </div>
-                      <div class="el_footer_copyright">
+                      <!-- <div class="el_footer_copyright">
                         <div class="cont">
                           <div class="el_copyright_area">
                             <div class="ed_copyright_waca">
@@ -1028,15 +1069,15 @@ $total_pages = ceil($total_records / $pageRow_records);
                             </div>
                           </div>
                         </div>
-                      </div>
-                      <div class="el_footer_company">
+                      </div> -->
+                      <!-- <div class="el_footer_company">
                         <div class="cont">
                           <ul class="el_footer_list d-flex list-unstyled mb-0">
                             <li>公司名稱: 密斯特喬有限公司</li>
                             <li>統一編號: 47098433</li>
                           </ul>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
