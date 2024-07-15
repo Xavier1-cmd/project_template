@@ -38,11 +38,68 @@ $total_pages = ceil($total_records / $pageRow_records);
   <link rel="stylesheet" href="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/frontend.css">
   <!-- End: Global css-->
 
-
   <title>模型屋</title>
+
+  <script language="javascript" src="jquery.min.js">
+  </script>
+
 </head>
 
 <body>
+  <script language="javascript">
+    (function($) {
+      $("body").append("<img id='goTopButton' style='display: none; z-index: 5; cursor: pointer;' title='回到頂端'/>");
+      var img = "gotop03.png", //宣告變數設定圖檔名稱
+        location = 0.85, //按鈕出現在螢幕的高度
+        right = 20, //距離右邊 px 值
+        opacity = 0.8, //預設透明度
+        speed = 800, //返回TOP捲動速度
+        $button = $("#goTopButton"); //定義JQUERY呼叫圖片ID
+      $body = $(document); //定義JQUERY網頁
+      $win = $(window); //定義JQUERY瀏覽器chrome
+      $button.attr("src", img); //將圖設定到goTopButton的src
+
+      window.goTopMove = function() {
+        //從網頁取得與頂端離距的數值，約為75px-165px之間
+        var scrollH = $body.scrollTop(),
+          winH = $win.height(),
+          css = {
+            "top": winH * location + "px",
+            "position": "fixed",
+            "right": right,
+            "opacity": opacity
+          }; //將參數設定css
+        if (scrollH > 20) {
+          $button.css(css);
+          $button.fadeIn("slow");
+        } else {
+          $button.fadeOut("slow");
+        }
+      };
+      $win.on({
+        scroll: function() {
+          goTopMove();
+        },
+        resize: function() {
+          goTopMove();
+        }
+      });
+      $button.on({
+        mouseover: function() {
+          $button.css("opacity", 1);
+        },
+        mouseout: function() {
+          $button.css("opacity", opacity);
+        },
+        click: function() {
+          $("html, body").animate({
+            scrollTop: 0
+          }, speed);
+        }
+      });
+    })(jQuery);
+  </script>
+
   <section id="header">
     <div class="main_background" style="background: url(https://img.cloudimg.in/uploads/shops/1840/theme/43/43e429041e4b3946a481efd490ef1bcf.jpg?v=202407120420) center center  repeat  #000000 ;position:fixed;">
       <nav class="js_mobile_second_menu el_nav_bar second">
@@ -290,6 +347,45 @@ $total_pages = ceil($total_records / $pageRow_records);
         </figure>
       </a>
     </div>
+
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
 
   </section>
 
@@ -836,7 +932,7 @@ $total_pages = ceil($total_records / $pageRow_records);
                               <div class="el_media_body d-flex">
                               </div>
                             </div>
-                            <div class="el_copyright_area">
+                            <!-- <div class="el_copyright_area">
                               <div class="ed_copyright_waca">
                                 <a class="copyright_inner d-flex align-items-center" href="https://www.waca.net/">
                                   <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="154.223" height="25" viewBox="0 0 154.223 25">
@@ -884,18 +980,18 @@ $total_pages = ceil($total_records / $pageRow_records);
                                   </svg>
                                 </a>
                               </div>
-                            </div>
+                            </div> -->
                           </div>
                         </div>
                       </div>
-                      <div class="el_footer_company">
+                      <!-- <div class="el_footer_company">
                         <div class="cont">
                           <ul class="el_footer_list d-flex list-unstyled mb-0">
                             <li>公司名稱: 密斯特喬有限公司</li>
                             <li>統一編號: 47098433</li>
                           </ul>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
                     <div class="el_ft_mobile">
                       <div class="cont">
