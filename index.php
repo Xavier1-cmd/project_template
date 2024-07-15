@@ -24,186 +24,238 @@ $total_records = $all_RecAlbum->num_rows;
 $total_pages = ceil($total_records / $pageRow_records);
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>模型專賣店</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.1/css/all.css">
-  <link rel="stylesheet" href="css/website_s01.css">
+
+  <!-- Begin: Global plugin css -->
+  <link rel="stylesheet" href="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/vendor.css">
+  <link rel="stylesheet" href="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/style.css">
+  <link rel="stylesheet" href="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/frontend.css">
+  <!-- End: Global css-->
+
+
+  <title>模型屋</title>
 </head>
 
 <body>
   <section id="header">
-    <nav class="navbar navbar-expand-sm fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="./index.php"><img src="./images/logo.jpg" class="img-fluid rounded-circle" alt="電商藥粧"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+    <div class="main_background" style="background: url(https://img.cloudimg.in/uploads/shops/1840/theme/43/43e429041e4b3946a481efd490ef1bcf.jpg?v=202407120420) center center  repeat  #000000 ;position:fixed;">
+    </div>
+    <div class="function_block">
+      <header class="function_area">
+        <div class="cont">
+          <div class="d-flex justify-content-between">
+            <ul class="function_list d-flex list-unstyled mb-0 flex_1">
+              <li>
+                <div class="el_hotkey_area">
+                  <span class="position-relative">
+                    <button class="btn el_btn el_btn_hotkey el_rounded_circle d-flex align-items-center justify-content-center js_hover_effect" type="button" style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-hover-style="background-color: #2B3033;border-color:#2B3033;color: #ffffff;" onclick="location.href='https://store.mrjoe.com.tw/order/query'">
+                      <i class="icon-new_ordersearch md-16"></i>
+                    </button>
+                    <div class="el_btn_tips position-absolute mb-0">
+                      <span class="el_top_triangle d-block mx-auto" style="border-bottom-color:rgba(50, 55, 58, 0.85);color: #ffffff;"></span>
+                      <h6 class="d-flex mb-0" style="background-color: rgba(50, 55, 58, 0.85);color: #ffffff;">訂單查詢
+                      </h6>
+                    </div>
+                  </span>
+                  <span class="position-relative">
+                    <button class="btn el_btn el_btn_hotkey el_rounded_circle d-flex align-items-center justify-content-center js_hover_effect" type="button" style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-hover-style="background-color: #2B3033;border-color:#2B3033;color: #ffffff;" onclick="location.href='https://store.mrjoe.com.tw/contact'">
+                      <i class="icon-new_mail md-16"></i>
+                    </button>
+                    <div class="el_btn_tips position-absolute mb-0">
+                      <span class="el_top_triangle d-block mx-auto" style="border-bottom-color:rgba(50, 55, 58, 0.85);color: #ffffff;"></span>
+                      <h6 class="d-flex mb-0" style="background-color: rgba(50, 55, 58, 0.85);color: #ffffff;">聯絡我們
+                      </h6>
+                    </div>
+                  </span>
+                  <span class="position-relative">
+                    <button class="btn el_btn el_btn_hotkey el_rounded_circle d-flex align-items-center justify-content-center js_hover_effect" type="button" style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-hover-style="background-color: #2B3033;border-color:#2B3033;color: #ffffff;" onclick="location.href='https://store.mrjoe.com.tw/faq'">
+                      <i class="icon-new_info md-16"></i>
+                    </button>
+                    <div class="el_btn_tips position-absolute mb-0">
+                      <span class="el_top_triangle d-block mx-auto" style="border-bottom-color:rgba(50, 55, 58, 0.85);color: #ffffff;"></span>
+                      <h6 class="d-flex mb-0" style="background-color: rgba(50, 55, 58, 0.85);color: #ffffff;">購物說明
+                      </h6>
+                    </div>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="el_login_area js_login" style="">
+                </div>
+                <div class="el_login_area js_logined" style="display:none">
+                  <span class="is_login position-relative">
+                    <button class="btn el_btn el_btn_login el_rounded_pill d-flex align-items-center justify-content-center js_member_hover_effect" type="button" style="background-color: #32373A;border-color:#32373A;" data-style="background-color: #32373A;border-color:#32373A;" data-hover-style="background-color: #FF9800;border-color:#FF9800;" onclick="location.href='https://store.mrjoe.com.tw/member/index'">
+                      <i class="icon-crown md-16"></i>
+                      <span style="background-color: rgba(255, 255, 255, 1)" data-style="background-color: rgba(255, 255, 255, 1)" data-hover-style="background-color: rgba(255, 255, 255, .1)">
+                        <b class="js_member_name" style="color: #32373A;" data-style="color: #32373A;" data-hover-style="color: #ffffff;">
+                          會員專區
+                        </b>
+                      </span>
+                    </button>
+                    <div class="el_btn_tips position-absolute mb-0">
+                      <span class="el_top_triangle d-block mx-auto" style="border-bottom-color:rgba(50, 55, 58, 0.85);color: #ffffff;"></span>
+                      <h6 class="d-flex mb-0" style="background-color: rgba(50, 55, 58, 0.85);color: #ffffff;">會員專區
+                      </h6>
+                    </div>
+                  </span>
+                  <span class="position-relative">
+                    <button class="btn el_btn el_btn_hotkey el_rounded_circle d-flex align-items-center justify-content-center js_hover_effect js_member_logout" type="button" style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-style="background-color: #32373A;border-color:#32373A;color: #ffffff;" data-hover-style="background-color: #2B3033;border-color:#2B3033;color: #ffffff;">
+                      <i class="icon-new_logout md-14"></i>
+                    </button>
+                    <div class="el_btn_tips position-absolute mb-0">
+                      <span class="el_top_triangle d-block mx-auto" style="border-bottom-color:rgba(50, 55, 58, 0.85);color: #ffffff;"></span>
+                      <h6 class="d-flex mb-0" style="background-color: rgba(50, 55, 58, 0.85);color: #ffffff;">登出</h6>
+                    </div>
+                  </span>
+                </div>
+              </li>
 
-            <li class="nav-item">
-              <a class="nav-link" href="./admin.php"><span class="text-primary">相簿管理</span></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#">會員註冊</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">會員登入</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">會員中心</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">最新活動</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">查訂單</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">折價券</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">購物車</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                企業專區
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">認識企業文化</a></li>
-                <li><a class="dropdown-item" href="#">全台門市資訊</a></li>
+            </ul>
+            <div class="el_social_area">
+              <ul class="social_list d-flex list-unstyled mb-0">
                 <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">供應商報價服務</a></li>
-                <li><a class="dropdown-item" href="#">加盟專區</a></li>
-                <li><a class="dropdown-item" href="#">投資人專區</a></li>
-              </ul>
-            </li>
-          </ul>
+                  <a class="d-block" href="https://store.mrjoe.com.tw/">
+                    <svg data-name=" 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" style="width: 30px;">
+                      <defs>
+                        <style>
+                          .cls-1 {
+                            fill: #2B3033;
+                          }
 
+                          .cls-2 {
+                            fill: #fff;
+                          }
+                        </style>
+                      </defs>
+                      <circle class="cls-1" cx="36" cy="36" r="36"></circle>
+                      <path class="cls-2" d="M41.62,33.6a3.3,3.3,0,0,1-3.25-2.36V18h4.45l2.06,6.44v5.9a3.27,3.27,0,0,1-3.26,3.26Z">
+                      </path>
+                      <path class="cls-2" d="M30.38,33.6a3.27,3.27,0,0,1-3.26-3.26v-5.9L29.18,18h4.45V30.34a3.26,3.26,0,0,1-3.25,3.26Z">
+                      </path>
+                      <path class="cls-2" d="M19.14,33.6a3.27,3.27,0,0,1-3.26-3.26V24.66L19.43,18h4.78l-1.82,5.7v6.64a3.26,3.26,0,0,1-3.25,3.26Z">
+                      </path>
+                      <path class="cls-2" d="M32.41,45.91h7.31V54H32.41Z"></path>
+                      <path class="cls-2" d="M44.45,54V43.54a2.37,2.37,0,0,0-2.36-2.37H30a2.37,2.37,0,0,0-2.37,2.37V54H21.94a1.64,1.64,0,0,1-1.64-1.65V38.24A8,8,0,0,0,24.76,36h0a8,8,0,0,0,11.18.06h0s.09.08.13.13a8.27,8.27,0,0,0,5.55,2.13h0A7.86,7.86,0,0,0,47.24,36h0a8,8,0,0,0,4.42,2.23h0v14.1A1.65,1.65,0,0,1,50.06,54H44.45Z">
+                      </path>
+                      <path class="cls-2" d="M52.86,33.6a3.26,3.26,0,0,1-3.25-3.26V23.7L47.79,18H52.6c1.68,3,3.07,5.61,3.52,6.53v5.81a3.27,3.27,0,0,1-3.26,3.26Z">
+                      </path>
+                    </svg>
+                  </a>
+                </li>
+
+                <li><a class="d-block" href="https://www.facebook.com/MRJOEHOBBY/" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_facebook.svg" width="30" height="30" alt=""></a></li>
+
+
+                <li><a class="d-block" href="https://www.instagram.com/mr.joehobby/?hl=zh-tw" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_instagram.svg" width="30" height="30" alt=""></a></li>
+
+                <li><a class="d-block" href="https://www.youtube.com/c/MRJOEHOBBYtv/" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_youtube.svg" width="30" height="30" alt=""></a></li>
+
+
+                <li><a class="d-block" href="https://www.tiktok.com/@mrjoehobby" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_tiktok.svg" width="30" height="30" alt=""></a></li>
+
+
+
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+      </header>
+    </div>
+
+    <nav class="js_mobile_first_menu el_nav_bar first position-fixed active">
+      <ul class="el_nav_items d-flex list-unstyled mb-0" style="background-color: rgba(50, 55, 58, 0.85);">
+        <!-- 漢堡堡 -->
+        <li>
+          <div class="js_footer_btn js_mobile_footer_btn js_mobile_menu d-flex align-items-center justify-content-center" data-type="menu">
+            <a class="mobile_footer_item btn el_btn el_nav_btn el_btn_hamburger d-flex flex-column align-items-center el_rounded_0 border-0" href="javascript:void(0)" style="color: #fff;">
+              <i class="icon-new_menu md-20"></i>
+              <h6 class="mb-0">選單</h6>
+            </a>
+          </div>
+        </li>
+
+
+        <li class="js_login" style="">
+          <div class=" js_mobile_footer_btn d-flex align-items-center justify-content-center" data-type="order">
+            <a class="mobile_footer_item btn el_btn el_nav_btn d-flex flex-column align-items-center el_rounded_0 border-0" href="https://store.mrjoe.com.tw/order/query" style="color: #fff;">
+              <i class="icon-new_ordersearch md-20"></i>
+              <h6 class="mb-0">查訂單</h6>
+            </a>
+          </div>
+        </li>
+        <li class="js_logined" style="display: none!important;">
+          <!-- 登出 -->
+          <div class="js_mobile_footer_btn d-flex align-items-center justify-content-center js_member_logout">
+            <a class="mobile_footer_item btn el_btn el_nav_btn d-flex flex-column align-items-center el_rounded_0 border-0" href="javascript:void(0)" style="color: #fff;">
+              <i class="icon-new_logout md-20"></i>
+              <h6 class="mb-0">登出</h6>
+            </a>
+          </div>
+        </li>
+
+        <li class="js_logined" style="display: none!important;">
+          <div class=" d-flex js_mobile_footer_btn align-items-center justify-content-center" data-type="member">
+            <a class="mobile_footer_item btn el_btn el_nav_btn d-flex flex-column align-items-center el_rounded_0 border-0" href="https://store.mrjoe.com.tw/faq" style="color: #fff;">
+              <i class="icon-new_info md-20"></i>
+              <h6 class="mb-0">說明</h6>
+            </a>
+          </div>
+        </li>
+        <li class="js_login" style="">
+          <div class="js_m_member d-flex js_mobile_footer_btn align-items-center justify-content-center" data-type="member">
+            <a class="mobile_footer_item btn el_btn el_nav_btn d-flex flex-column align-items-center el_rounded_0 border-0" href="https://store.mrjoe.com.tw/faq" style="color: #fff;">
+              <i class="icon-new_info md-20"></i>
+              <h6 class="mb-0">說明</h6>
+            </a>
+          </div>
+        </li>
+
+
+        <li>
+          <div class="js_mobile_footer_btn js_footer_btn d-flex align-items-center justify-content-center" data-type="search">
+            <!-- 點擊按鈕後，.el_nav_search 加 .active -->
+            <a class="mobile_footer_item btn el_btn el_nav_btn el_nav_search d-flex flex-column align-items-center el_rounded_0 border-0" href="javascript:void(0)" style="color: #fff;">
+              <i class="icon-new_search md-20"></i>
+              <h6 class="mb-0">搜尋</h6>
+            </a>
+            <div class="js_m_footer_area el_nav_info position-absolute p-10">
+              <div class="form_group mb-0">
+                <form class="form_data" action="">
+                  <input id="form_search_mobile" name="keyword" class="form_input form_control" placeholder="商品搜尋" type="text">
+                  <span class="msg_error"><i class="icon-new_exclamation"></i></span>
+                </form>
+                <div class="help_block d-none"><i class="icon-new_exclaim_circle"></i><span>必填欄位，不得為空白。</span></div>
+              </div>
+            </div>
+            <div class="el_nav_overlay js_mask_cover_for_nav"></div>
+          </div>
+        </li>
+
+        <li class="el_nav_fn">
+          <div class="js_footer_btn js_mobile_footer_btn js_mobile_cart d-flex align-items-center justify-content-center" data-type="cart">
+            <a class="js_cart_toggle mobile_footer_item btn el_btn el_nav_btn el_btn_cart d-flex flex-column align-items-center el_rounded_0 border-0" href="javascript:void(0)" style="color: #fff;">
+              <span class="d-flex justify-content-center">
+                <i class="icon-new_cart md-24"></i>
+                <small class="el_cart_num el_rounded_pill d-block" style="background-color: #C14848;"><span class="position-relative js_cart_number">0</span></small>
+              </span>
+              <h6 class="mb-0">購物車</h6>
+            </a>
+          </div>
+        </li>
+      </ul>
     </nav>
   </section>
+
   <section id="content">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-2">
-          <div class="sidebar">
-            <form name="search" id="search" method="get">
-              <div class="input-group">
-                <input type="text" name="search_name" class="form-control" placeholder="search...">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="submit"><i class="fas fa-search fa-lg"></i></button></span>
-              </div>
-            </form>
-          </div>
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <i class="fas fa-bomb fa-lg fa-fw"></i><span class="pl-1">鋼彈模型</span>
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>水星的魔女</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>1/100 MG</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>1/100 RE系列</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  <i class="fas fa-wand-sparkles fa-lg fa-fw"></i><span class="pl-1">動畫分類</span>
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>SPYxFAMILY 間諜家家酒</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>七龍珠</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>福音戰士Evangelion</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  <i class="fas fa-ghost fa-lg fa-fw"></i><span class="pl-1">動漫周邊</span>
-                </button>
-              </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>PVC、公仔、景品</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>可動公仔/可動玩偶</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>轉蛋 食玩 盒玩 盲盒</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  <i class="fas fa-face-smile fa-lg fa-fw"></i><span class="pl-1">好微笑 GoodSmile</span>
-                </button>
-              </h2>
-              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                <div class="accordion-body">
-                  <table class="table">
-                    <tbody>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>黏土人 Nendoroid</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>figma可動系列</a></td>
-                      </tr>
-                      <tr>
-                        <td><a href="#"><em class="fas fa-edit"></em>ACT MODE 系列</a></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="col-md-1">
         </div>
         <div class="col-md-10">
           <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -467,7 +519,8 @@ $total_pages = ceil($total_records / $pageRow_records);
             </div> -->
           </div>
 
-          <div class="row mt-2">
+          <hr>
+          <!-- <div class="row mt-2">
             <nav aria-label="Page navigation example">
               <ul class="pagination justify-content-center">
                 <li class="page-item">
@@ -507,83 +560,499 @@ $total_pages = ceil($total_records / $pageRow_records);
                 <?php } ?>
               </ul>
             </nav>
+          </div> -->
+          <div class="pt_pagination_area js_pagination_block">
+            <div class="pt_pagination_area js_pagination_area pt_pagination_a">
+              <div class="d-flex justify-content-center align-items-center">
+                <ul class="pt_pagination_list d-flex align-items-center list-unstyled mb-0" style="background-color:rgba(255, 85, 85, .8);border-color:rgba(255, 85, 85, .8);">
+                  <li data-page="1">
+                    <button class="btn el_btn btn_page btn_first js_pagination_page_button" disabled="disabled" type="button" style="">
+                      <i class="icon-first_page"></i>
+                    </button>
+                  </li>
+                  <li data-page="0">
+                    <button class="btn el_btn btn_page btn_prev js_pagination_page_button" disabled="disabled" type="button" style="">
+                      <i class="icon-navigate_before"></i>
+                    </button>
+                  </li>
+                  <li class="active" data-page="1">
+                    <button class="btn el_btn btn_page  js_pagination_button js_pagination_page_button" type="button" style="">1</button>
+                    <div class="page_search_area">
+                      <div class="page_search d-flex position-relative">
+                        <input class="el_form_cont text-center js_pagination_search_form" placeholder="頁數" value="1" type="text" style="color:rgba(255, 85, 85, 1);">
+                        <button class="btn el_btn btn_search js_pagination_search_button" type="button" style="background-color:rgba(255, 85, 85, 1);">
+                          <i class="icon-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="" data-page="2">
+                    <button class="btn el_btn btn_page  js_pagination_button js_pagination_page_button" type="button" style="">2</button>
+                    <div class="page_search_area">
+                      <div class="page_search d-flex position-relative">
+                        <input class="el_form_cont text-center js_pagination_search_form" placeholder="頁數" value="1" type="text" style="background-color:rgba(255, 85, 85, 1);">
+                        <button class="btn el_btn btn_search js_pagination_search_button" type="button" style="">
+                          <i class="icon-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li disabled=""><span class="btn el_btn btn_page" style="">...</span></li>
+                  <li class="" data-page="33">
+                    <button class="btn el_btn btn_page  js_pagination_button js_pagination_page_button" type="button" style="">33</button>
+                    <div class="page_search_area">
+                      <div class="page_search d-flex position-relative">
+                        <input class="el_form_cont text-center js_pagination_search_form" placeholder="頁數" value="1" type="text" style="background-color:rgba(255, 85, 85, 1);">
+                        <button class="btn el_btn btn_search js_pagination_search_button" type="button" style="">
+                          <i class="icon-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                  <li data-page="2">
+                    <button class="btn el_btn btn_page btn_next js_pagination_page_button" style="" type="button">
+                      <i class="icon-navigate_next"></i>
+                    </button>
+                  </li>
+                  <li data-page="33">
+                    <button class="btn el_btn btn_page btn_last js_pagination_page_button" style="" type="button">
+                      <i class="icon-last_page"></i>
+                    </button>
+                  </li>
+                  <li>
+                    <div class="page_search_area" data-goto="前往" data-page="頁" style="">
+                      <div class="page_search d-flex position-relative">
+                        <input class="el_form_cont text-center js_pagination_search_form" placeholder="頁數" value="1" type="text" style="">
+                        <button class="btn el_btn btn_search js_pagination_search_button" type="button" style="">
+                          <i class="icon-search"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="el_ft04 el_same" role="footer">
+    <div class="block_area">
+      <span class="block_bg filter_0 position-absolute" style="background-color:rgba(50, 55, 58, 0.95);"></span>
+      <div class="cont_full">
+        <div class="layout_grid gutter_0 g1_01">
+          <div class="layout_row grid_1">
+            <!-- g1_01 -->
+            <div class="layout_cell flex_1 " grid_size="1">
+              <div class="layout_inner">
+
+                <div id="1244058" class="element_inner js_component">
+                  <div class="el_inner js_footer">
+                    <div class="el_ft_desktop">
+                      <div class="el_footer_top">
+                        <div class="cont">
+                          <div class="el_top_block d-flex align-items-center justify-content-center">
+                            <div class="d-flex align-items-center">
+                              <div class="el_logo_area mr-15">
+                                <div class="el_logo_inner d-flex">
+                                  <div class="el_logo_fans d-block">
+                                    <iframe class="d-flex" src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/mrjoe.model&amp;tabs&amp;width=280&amp;height=130&amp;small_header=false&amp;adapt_container_width=false&amp;hide_cover=false&amp;show_facepile=false&amp;appId=1480453388896053" width="280" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="el_link_area">
+                                <div class="el_link_inner d-flex is_title">
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_pc1" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_pc1" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/about" style="color: #ffffff;">
+                                        關於
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/contact" style="color: #ffffff;">聯絡我們</a>
+                                      </li>
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/blogs" style="color: #ffffff;">部落格</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_pc2" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_pc2" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/product/all" style="color: #ffffff;">
+                                        全部商品
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/order/query" style="color: #ffffff;">訂單查詢</a>
+                                      </li>
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#order" style="color: #ffffff;">訂單相關說明</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_pc3" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_pc3" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/faq#payment" style="color: #ffffff;">
+                                        付款方式說明
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#shipping" style="color: #ffffff;">寄送方式說明</a>
+                                      </li>
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#service" style="color: #ffffff;">售後服務說明</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_pc4" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_pc4" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/faq#members_redeem" style="color: #ffffff;">
+                                        現金積點規則
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#policy" style="color: #ffffff;">隱私權條款</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="el_media ml-auto" style="border-right: 0; margin-right: -5px;">
+                              <div class="el_media_body d-grid">
+                                <div class="el_social_area">
+                                  <ul class="social_list d-flex list-unstyled mb-0">
+                                    <li>
+                                      <a class="d-block" href="https://store.mrjoe.com.tw/">
+                                        <svg data-name=" 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" style="width: 30px;">
+                                          <defs>
+                                            <style>
+                                              .cls-1 {
+                                                fill: #2B3033;
+                                              }
+
+                                              .cls-2 {
+                                                fill: #fff;
+                                              }
+                                            </style>
+                                          </defs>
+                                          <circle class="cls-1" cx="36" cy="36" r="36"></circle>
+                                          <path class="cls-2" d="M41.62,33.6a3.3,3.3,0,0,1-3.25-2.36V18h4.45l2.06,6.44v5.9a3.27,3.27,0,0,1-3.26,3.26Z">
+                                          </path>
+                                          <path class="cls-2" d="M30.38,33.6a3.27,3.27,0,0,1-3.26-3.26v-5.9L29.18,18h4.45V30.34a3.26,3.26,0,0,1-3.25,3.26Z">
+                                          </path>
+                                          <path class="cls-2" d="M19.14,33.6a3.27,3.27,0,0,1-3.26-3.26V24.66L19.43,18h4.78l-1.82,5.7v6.64a3.26,3.26,0,0,1-3.25,3.26Z">
+                                          </path>
+                                          <path class="cls-2" d="M32.41,45.91h7.31V54H32.41Z">
+                                          </path>
+                                          <path class="cls-2" d="M44.45,54V43.54a2.37,2.37,0,0,0-2.36-2.37H30a2.37,2.37,0,0,0-2.37,2.37V54H21.94a1.64,1.64,0,0,1-1.64-1.65V38.24A8,8,0,0,0,24.76,36h0a8,8,0,0,0,11.18.06h0s.09.08.13.13a8.27,8.27,0,0,0,5.55,2.13h0A7.86,7.86,0,0,0,47.24,36h0a8,8,0,0,0,4.42,2.23h0v14.1A1.65,1.65,0,0,1,50.06,54H44.45Z">
+                                          </path>
+                                          <path class="cls-2" d="M52.86,33.6a3.26,3.26,0,0,1-3.25-3.26V23.7L47.79,18H52.6c1.68,3,3.07,5.61,3.52,6.53v5.81a3.27,3.27,0,0,1-3.26,3.26Z">
+                                          </path>
+                                        </svg>
+                                      </a>
+                                    </li>
+
+                                    <li><a class="d-block" href="https://www.facebook.com/MRJOEHOBBY/" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_facebook.svg" width="30" height="30" alt=""></a></li>
+
+
+                                    <li><a class="d-block" href="https://www.instagram.com/mr.joehobby/?hl=zh-tw" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_instagram.svg" width="30" height="30" alt=""></a></li>
+
+                                    <li><a class="d-block" href="https://www.youtube.com/c/MRJOEHOBBYtv/" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_youtube.svg" width="30" height="30" alt=""></a></li>
+
+
+                                    <li><a class="d-block" href="https://www.tiktok.com/@mrjoehobby" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_tiktok.svg" width="30" height="30" alt=""></a></li>
+
+
+
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="el_footer_bottom">
+                        <div class="cont">
+                          <div class="el_bottom_block d-flex align-items-center justify-content-center">
+                            <div class="el_media">
+                              <div class="el_media_body d-flex">
+                              </div>
+                            </div>
+                            <div class="el_copyright_area">
+                              <div class="ed_copyright_waca">
+                                <a class="copyright_inner d-flex align-items-center" href="https://www.waca.net/">
+                                  <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="154.223" height="25" viewBox="0 0 154.223 25">
+                                    <g>
+                                      <path d="M81.344,16.033,84.707.283h-3.92l-4.216,19.4A4.6,4.6,0,0,0,81.344,16.033Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M72.437.283h0l2.782,13.029L77.957.283Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M80.844,21.1A1.952,1.952,0,1,0,82.8,23.048,1.952,1.952,0,0,0,80.844,21.1" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M139.572,11.114Z" fill="#000" fill-opacity="0.4"></path>
+                                      <path d="M118.913,16.8h1.842l.911-2.019h2.8l.894,2.019h1.848l-4.149-8.909Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M150.075,7.887,145.927,16.8h1.842l.911-2.019h2.8l.894,2.019h1.847Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M91.637.283h-3.92L83.5,19.688a4.6,4.6,0,0,0,4.772-3.655Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M111.825,13.144,109.74,7.705l-1.981,5.467L106.022,8.51h-1.743l3.353,9.014,2.13-5.472,2.162,5.477,3.36-9.019H113.53Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M139.567,9.172a4.709,4.709,0,0,0-1.953-.794,4.79,4.79,0,0,0-.755-.061,4.484,4.484,0,0,0-1.667.32,4.1,4.1,0,0,0-1.958,1.578,4.293,4.293,0,0,0-.728,2.454,4.32,4.32,0,0,0,.723,2.46,4.01,4.01,0,0,0,2.8,1.793,5.561,5.561,0,0,0,.915.078,4.834,4.834,0,0,0,1.363-.194,3.87,3.87,0,0,0,1.186-.579l.093-.066V14.109q-.237.2-.454.386a4.328,4.328,0,0,1-.483.347,3.384,3.384,0,0,1-1.821.525,2.4,2.4,0,0,1-1.809-.75,2.7,2.7,0,0,1-.722-1.937,2.7,2.7,0,0,1,.739-1.974,2.572,2.572,0,0,1,1.925-.756,3.4,3.4,0,0,1,2.261.866l.354.3.1-1.87Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M89.588,21.1a1.952,1.952,0,1,0,1.952,1.952A1.952,1.952,0,0,0,89.588,21.1" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M93.454,3.663,90.035,19.688a4.6,4.6,0,0,0,4.773-3.655L97.695,2.471a.845.845,0,0,1,.726-.645l0,0h2.213L102.446.009h-4.22A4.6,4.6,0,0,0,93.454,3.663Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M3.327,9.173a2.132,2.132,0,0,0-1.083.28,2.191,2.191,0,0,0-.774.73V9.307H0v8.226H1.576v-3a3.016,3.016,0,0,0,.845.673,2,2,0,0,0,.895.2,2.271,2.271,0,0,0,1.767-.828,3.394,3.394,0,0,0,.729-2.32,3.3,3.3,0,0,0-.723-2.267A2.274,2.274,0,0,0,3.327,9.173Zm.516,4.536a1.138,1.138,0,0,1-.915.44,1.216,1.216,0,0,1-.97-.479,2.294,2.294,0,0,1-.4-1.484,1.99,1.99,0,0,1,.382-1.322,1.21,1.21,0,0,1,.959-.446,1.164,1.164,0,0,1,.932.455,2.157,2.157,0,0,1,.376,1.391,2.271,2.271,0,0,1-.365,1.445" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M10.228,9.173a3.257,3.257,0,0,0-1.585.387,2.663,2.663,0,0,0-1.1,1.122A3.228,3.228,0,0,0,7.159,12.2a3.617,3.617,0,0,0,.387,1.742,2.54,2.54,0,0,0,1.131,1.086,3.454,3.454,0,0,0,1.562.37,2.949,2.949,0,0,0,2.2-.889,3.07,3.07,0,0,0,.873-2.242,3.035,3.035,0,0,0-.865-2.219,2.975,2.975,0,0,0-2.216-.878m1.041,4.472a1.376,1.376,0,0,1-2.073,0,1.972,1.972,0,0,1-.421-1.358A1.974,1.974,0,0,1,9.2,10.929a1.376,1.376,0,0,1,2.073,0,1.965,1.965,0,0,1,.418,1.347,2,2,0,0,1-.418,1.369" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M20.417,13.213l-.993-3.9H17.9l-1.026,3.9-1.117-3.9H14.228l1.886,5.959h1.531l1.01-3.833,1.027,3.833H21.2L23.11,9.308H21.556Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M26.673,9.173a2.552,2.552,0,0,0-1.959.838,3.293,3.293,0,0,0-.774,2.32,3.41,3.41,0,0,0,.589,2.054,2.667,2.667,0,0,0,2.3,1.016,2.811,2.811,0,0,0,1.635-.452,2.577,2.577,0,0,0,.957-1.316l-1.571-.264a1.238,1.238,0,0,1-.382.651.963.963,0,0,1-.623.2,1.192,1.192,0,0,1-.908-.39,1.589,1.589,0,0,1-.382-1.091h3.95a3.888,3.888,0,0,0-.735-2.69,2.644,2.644,0,0,0-2.1-.878m-1.089,2.6a1.454,1.454,0,0,1,.331-1.021,1.138,1.138,0,0,1,1.672-.02,1.526,1.526,0,0,1,.354,1.041Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M33.324,9.364a2.54,2.54,0,0,0-.677.791V9.308H31.183v5.959h1.576V13.426a9.425,9.425,0,0,1,.132-2,1.24,1.24,0,0,1,.362-.659.872.872,0,0,1,.561-.183,1.389,1.389,0,0,1,.742.258l.487-1.374a2,2,0,0,0-1.037-.3A1.24,1.24,0,0,0,33.324,9.364Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M38.454,9.173a2.55,2.55,0,0,0-1.958.838,3.293,3.293,0,0,0-.774,2.32,3.41,3.41,0,0,0,.589,2.054,2.667,2.667,0,0,0,2.3,1.016,2.811,2.811,0,0,0,1.635-.452,2.577,2.577,0,0,0,.957-1.316l-1.571-.264a1.238,1.238,0,0,1-.382.651.963.963,0,0,1-.623.2,1.2,1.2,0,0,1-.909-.39,1.593,1.593,0,0,1-.381-1.091h3.95a3.888,3.888,0,0,0-.735-2.69,2.644,2.644,0,0,0-2.1-.878m-1.088,2.6a1.454,1.454,0,0,1,.331-1.021,1.138,1.138,0,0,1,1.672-.02,1.526,1.526,0,0,1,.354,1.041Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M46.92,10a2.229,2.229,0,0,0-1.728-.831,2.321,2.321,0,0,0-1.8.789,3.326,3.326,0,0,0-.713,2.3,3.367,3.367,0,0,0,.732,2.309,2.27,2.27,0,0,0,1.759.827,2.215,2.215,0,0,0,1-.249,2.366,2.366,0,0,0,.861-.761v.876H48.5V7.04H46.92Zm-.376,3.689a1.159,1.159,0,0,1-.926.463,1.192,1.192,0,0,1-1.066-.617,2.731,2.731,0,0,1-.264-1.381,2.016,2.016,0,0,1,.379-1.332,1.184,1.184,0,0,1,.94-.446,1.172,1.172,0,0,1,.948.451,2.34,2.34,0,0,1,.371,1.479A2.14,2.14,0,0,1,46.544,13.692Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M57.4,9.173a2.231,2.231,0,0,0-1.728.83V7.041H54.1v8.225H55.56v-.875a2.41,2.41,0,0,0,.856.754,2.173,2.173,0,0,0,1.007.256,2.269,2.269,0,0,0,1.765-.825,3.448,3.448,0,0,0,.726-2.351A3.265,3.265,0,0,0,59.2,9.961,2.325,2.325,0,0,0,57.4,9.173Zm.53,4.536a1.116,1.116,0,0,1-.889.446,1.247,1.247,0,0,1-1.089-.628,2.54,2.54,0,0,1-.292-1.369,2.028,2.028,0,0,1,.376-1.339,1.191,1.191,0,0,1,.943-.44,1.173,1.173,0,0,1,.948.452A2.325,2.325,0,0,1,58.3,12.3a2.195,2.195,0,0,1-.368,1.406" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                      <path d="M64,13.538,62.573,9.307H60.9l2.267,5.976a2.242,2.242,0,0,1-.4.822.99.99,0,0,1-.814.323,3.536,3.536,0,0,1-.667-.073l.14,1.234a4.151,4.151,0,0,0,.892.095,3.1,3.1,0,0,0,.805-.095,1.9,1.9,0,0,0,.6-.266,1.757,1.757,0,0,0,.432-.447,4.206,4.206,0,0,0,.395-.8l.376-1.038,2.1-5.735H65.389Z" fill="#000" fill-opacity="0.4">
+                                      </path>
+                                    </g>
+                                  </svg>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="el_footer_company">
+                        <div class="cont">
+                          <ul class="el_footer_list d-flex list-unstyled mb-0">
+                            <li>公司名稱: 密斯特喬有限公司</li>
+                            <li>統一編號: 47098433</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="el_ft_mobile">
+                      <div class="cont">
+                        <ul class="el_footer_mobile d-grid list-unstyled mb-0 align-items-center" style="">
+                          <li class="el_footer_left">
+                            <div class="el_footer_inner d-flex flex-column">
+                              <div class="el_logo_area">
+                                <div class="el_logo_inner d-flex">
+                                  <div class="el_logo_fans d-block">
+                                    <iframe class="d-flex" src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/mrjoe.model&amp;tabs&amp;width=280&amp;height=130&amp;small_header=false&amp;adapt_container_width=false&amp;hide_cover=false&amp;show_facepile=false&amp;appId=1480453388896053" width="280" height="130" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="el_footer_right d-flex flex-column">
+                            <div class="el_footer_inner d-flex flex-column">
+                              <div class="el_link_area">
+                                <div class="el_link_inner d-flex is_title">
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_mobile1" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_mobile1" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/about" style="color: #ffffff;">
+                                        關於
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/contact" style="color: #ffffff;">聯絡我們</a>
+                                      </li>
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/blogs" style="color: #ffffff;">部落格</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_mobile2" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_mobile2" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/product/all" style="color: #ffffff;">
+                                        全部商品
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/order/query" style="color: #ffffff;">訂單查詢</a>
+                                      </li>
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#order" style="color: #ffffff;">訂單相關說明</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_mobile3" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_mobile3" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/faq#payment" style="color: #ffffff;">
+                                        付款方式說明
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#shipping" style="color: #ffffff;">寄送方式說明</a>
+                                      </li>
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#service" style="color: #ffffff;">售後服務說明</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                  <div class="el_link_items d-grid mb-0">
+                                    <input id="el_ft_link_mobile4" class="el_link_ipt d-none" type="checkbox">
+                                    <label for="el_ft_link_mobile4" class="el_link_lab el_link_title mb-0" style="color: #ffffff;">
+                                      <a href="https://store.mrjoe.com.tw/faq#members_redeem" style="color: #ffffff;">
+                                        現金積點規則
+                                      </a>
+                                    </label>
+                                    <ul class="el_link_list justify-content-center list-unstyled mb-0">
+                                      <li>
+                                        <a href="https://store.mrjoe.com.tw/faq#policy" style="color: #ffffff;">隱私權條款</a>
+                                      </li>
+                                    </ul>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="el_footer_block flex-wrap">
+                                <div class="el_social_area">
+                                  <ul class="social_list d-flex list-unstyled mb-0">
+                                    <li>
+                                      <a class="d-block" href="https://store.mrjoe.com.tw/">
+                                        <svg data-name=" 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" style="width: 30px;">
+                                          <defs>
+                                            <style>
+                                              .cls-1 {
+                                                fill: #2B3033;
+                                              }
+
+                                              .cls-2 {
+                                                fill: #fff;
+                                              }
+                                            </style>
+                                          </defs>
+                                          <circle class="cls-1" cx="36" cy="36" r="36"></circle>
+                                          <path class="cls-2" d="M41.62,33.6a3.3,3.3,0,0,1-3.25-2.36V18h4.45l2.06,6.44v5.9a3.27,3.27,0,0,1-3.26,3.26Z">
+                                          </path>
+                                          <path class="cls-2" d="M30.38,33.6a3.27,3.27,0,0,1-3.26-3.26v-5.9L29.18,18h4.45V30.34a3.26,3.26,0,0,1-3.25,3.26Z">
+                                          </path>
+                                          <path class="cls-2" d="M19.14,33.6a3.27,3.27,0,0,1-3.26-3.26V24.66L19.43,18h4.78l-1.82,5.7v6.64a3.26,3.26,0,0,1-3.25,3.26Z">
+                                          </path>
+                                          <path class="cls-2" d="M32.41,45.91h7.31V54H32.41Z">
+                                          </path>
+                                          <path class="cls-2" d="M44.45,54V43.54a2.37,2.37,0,0,0-2.36-2.37H30a2.37,2.37,0,0,0-2.37,2.37V54H21.94a1.64,1.64,0,0,1-1.64-1.65V38.24A8,8,0,0,0,24.76,36h0a8,8,0,0,0,11.18.06h0s.09.08.13.13a8.27,8.27,0,0,0,5.55,2.13h0A7.86,7.86,0,0,0,47.24,36h0a8,8,0,0,0,4.42,2.23h0v14.1A1.65,1.65,0,0,1,50.06,54H44.45Z">
+                                          </path>
+                                          <path class="cls-2" d="M52.86,33.6a3.26,3.26,0,0,1-3.25-3.26V23.7L47.79,18H52.6c1.68,3,3.07,5.61,3.52,6.53v5.81a3.27,3.27,0,0,1-3.26,3.26Z">
+                                          </path>
+                                        </svg>
+                                      </a>
+                                    </li>
+
+                                    <li><a class="d-block" href="https://www.facebook.com/MRJOEHOBBY/" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_facebook.svg" width="30" height="30" alt=""></a></li>
+
+
+                                    <li><a class="d-block" href="https://www.instagram.com/mr.joehobby/?hl=zh-tw" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_instagram.svg" width="30" height="30" alt=""></a></li>
+
+                                    <li><a class="d-block" href="https://www.youtube.com/c/MRJOEHOBBYtv/" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_youtube.svg" width="30" height="30" alt=""></a></li>
+
+
+                                    <li><a class="d-block" href="https://www.tiktok.com/@mrjoehobby" target="_blank"><img class="mw-100" src="MR.JOE%20HOBBY%20%E6%A8%A1%E5%9E%8B%E5%B0%88%E9%96%80%E5%BA%97_files/img_tiktok.svg" width="30" height="30" alt=""></a></li>
+
+
+
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="el_footer_copyright">
+                        <div class="cont">
+                          <div class="el_copyright_area">
+                            <div class="ed_copyright_waca">
+                              <a class="copyright_inner d-flex align-items-center" href="https://www.waca.net/">
+                                <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="154.223" height="25" viewBox="0 0 154.223 25">
+                                  <g>
+                                    <path d="M81.344,16.033,84.707.283h-3.92l-4.216,19.4A4.6,4.6,0,0,0,81.344,16.033Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M72.437.283h0l2.782,13.029L77.957.283Z" fill="#000" fill-opacity="0.4">
+                                    </path>
+                                    <path d="M80.844,21.1A1.952,1.952,0,1,0,82.8,23.048,1.952,1.952,0,0,0,80.844,21.1" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M139.572,11.114Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M118.913,16.8h1.842l.911-2.019h2.8l.894,2.019h1.848l-4.149-8.909Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M150.075,7.887,145.927,16.8h1.842l.911-2.019h2.8l.894,2.019h1.847Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M91.637.283h-3.92L83.5,19.688a4.6,4.6,0,0,0,4.772-3.655Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M111.825,13.144,109.74,7.705l-1.981,5.467L106.022,8.51h-1.743l3.353,9.014,2.13-5.472,2.162,5.477,3.36-9.019H113.53Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M139.567,9.172a4.709,4.709,0,0,0-1.953-.794,4.79,4.79,0,0,0-.755-.061,4.484,4.484,0,0,0-1.667.32,4.1,4.1,0,0,0-1.958,1.578,4.293,4.293,0,0,0-.728,2.454,4.32,4.32,0,0,0,.723,2.46,4.01,4.01,0,0,0,2.8,1.793,5.561,5.561,0,0,0,.915.078,4.834,4.834,0,0,0,1.363-.194,3.87,3.87,0,0,0,1.186-.579l.093-.066V14.109q-.237.2-.454.386a4.328,4.328,0,0,1-.483.347,3.384,3.384,0,0,1-1.821.525,2.4,2.4,0,0,1-1.809-.75,2.7,2.7,0,0,1-.722-1.937,2.7,2.7,0,0,1,.739-1.974,2.572,2.572,0,0,1,1.925-.756,3.4,3.4,0,0,1,2.261.866l.354.3.1-1.87Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M89.588,21.1a1.952,1.952,0,1,0,1.952,1.952A1.952,1.952,0,0,0,89.588,21.1" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M93.454,3.663,90.035,19.688a4.6,4.6,0,0,0,4.773-3.655L97.695,2.471a.845.845,0,0,1,.726-.645l0,0h2.213L102.446.009h-4.22A4.6,4.6,0,0,0,93.454,3.663Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M3.327,9.173a2.132,2.132,0,0,0-1.083.28,2.191,2.191,0,0,0-.774.73V9.307H0v8.226H1.576v-3a3.016,3.016,0,0,0,.845.673,2,2,0,0,0,.895.2,2.271,2.271,0,0,0,1.767-.828,3.394,3.394,0,0,0,.729-2.32,3.3,3.3,0,0,0-.723-2.267A2.274,2.274,0,0,0,3.327,9.173Zm.516,4.536a1.138,1.138,0,0,1-.915.44,1.216,1.216,0,0,1-.97-.479,2.294,2.294,0,0,1-.4-1.484,1.99,1.99,0,0,1,.382-1.322,1.21,1.21,0,0,1,.959-.446,1.164,1.164,0,0,1,.932.455,2.157,2.157,0,0,1,.376,1.391,2.271,2.271,0,0,1-.365,1.445" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M10.228,9.173a3.257,3.257,0,0,0-1.585.387,2.663,2.663,0,0,0-1.1,1.122A3.228,3.228,0,0,0,7.159,12.2a3.617,3.617,0,0,0,.387,1.742,2.54,2.54,0,0,0,1.131,1.086,3.454,3.454,0,0,0,1.562.37,2.949,2.949,0,0,0,2.2-.889,3.07,3.07,0,0,0,.873-2.242,3.035,3.035,0,0,0-.865-2.219,2.975,2.975,0,0,0-2.216-.878m1.041,4.472a1.376,1.376,0,0,1-2.073,0,1.972,1.972,0,0,1-.421-1.358A1.974,1.974,0,0,1,9.2,10.929a1.376,1.376,0,0,1,2.073,0,1.965,1.965,0,0,1,.418,1.347,2,2,0,0,1-.418,1.369" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M20.417,13.213l-.993-3.9H17.9l-1.026,3.9-1.117-3.9H14.228l1.886,5.959h1.531l1.01-3.833,1.027,3.833H21.2L23.11,9.308H21.556Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M26.673,9.173a2.552,2.552,0,0,0-1.959.838,3.293,3.293,0,0,0-.774,2.32,3.41,3.41,0,0,0,.589,2.054,2.667,2.667,0,0,0,2.3,1.016,2.811,2.811,0,0,0,1.635-.452,2.577,2.577,0,0,0,.957-1.316l-1.571-.264a1.238,1.238,0,0,1-.382.651.963.963,0,0,1-.623.2,1.192,1.192,0,0,1-.908-.39,1.589,1.589,0,0,1-.382-1.091h3.95a3.888,3.888,0,0,0-.735-2.69,2.644,2.644,0,0,0-2.1-.878m-1.089,2.6a1.454,1.454,0,0,1,.331-1.021,1.138,1.138,0,0,1,1.672-.02,1.526,1.526,0,0,1,.354,1.041Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M33.324,9.364a2.54,2.54,0,0,0-.677.791V9.308H31.183v5.959h1.576V13.426a9.425,9.425,0,0,1,.132-2,1.24,1.24,0,0,1,.362-.659.872.872,0,0,1,.561-.183,1.389,1.389,0,0,1,.742.258l.487-1.374a2,2,0,0,0-1.037-.3A1.24,1.24,0,0,0,33.324,9.364Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M38.454,9.173a2.55,2.55,0,0,0-1.958.838,3.293,3.293,0,0,0-.774,2.32,3.41,3.41,0,0,0,.589,2.054,2.667,2.667,0,0,0,2.3,1.016,2.811,2.811,0,0,0,1.635-.452,2.577,2.577,0,0,0,.957-1.316l-1.571-.264a1.238,1.238,0,0,1-.382.651.963.963,0,0,1-.623.2,1.2,1.2,0,0,1-.909-.39,1.593,1.593,0,0,1-.381-1.091h3.95a3.888,3.888,0,0,0-.735-2.69,2.644,2.644,0,0,0-2.1-.878m-1.088,2.6a1.454,1.454,0,0,1,.331-1.021,1.138,1.138,0,0,1,1.672-.02,1.526,1.526,0,0,1,.354,1.041Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M46.92,10a2.229,2.229,0,0,0-1.728-.831,2.321,2.321,0,0,0-1.8.789,3.326,3.326,0,0,0-.713,2.3,3.367,3.367,0,0,0,.732,2.309,2.27,2.27,0,0,0,1.759.827,2.215,2.215,0,0,0,1-.249,2.366,2.366,0,0,0,.861-.761v.876H48.5V7.04H46.92Zm-.376,3.689a1.159,1.159,0,0,1-.926.463,1.192,1.192,0,0,1-1.066-.617,2.731,2.731,0,0,1-.264-1.381,2.016,2.016,0,0,1,.379-1.332,1.184,1.184,0,0,1,.94-.446,1.172,1.172,0,0,1,.948.451,2.34,2.34,0,0,1,.371,1.479A2.14,2.14,0,0,1,46.544,13.692Z" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M57.4,9.173a2.231,2.231,0,0,0-1.728.83V7.041H54.1v8.225H55.56v-.875a2.41,2.41,0,0,0,.856.754,2.173,2.173,0,0,0,1.007.256,2.269,2.269,0,0,0,1.765-.825,3.448,3.448,0,0,0,.726-2.351A3.265,3.265,0,0,0,59.2,9.961,2.325,2.325,0,0,0,57.4,9.173Zm.53,4.536a1.116,1.116,0,0,1-.889.446,1.247,1.247,0,0,1-1.089-.628,2.54,2.54,0,0,1-.292-1.369,2.028,2.028,0,0,1,.376-1.339,1.191,1.191,0,0,1,.943-.44,1.173,1.173,0,0,1,.948.452A2.325,2.325,0,0,1,58.3,12.3a2.195,2.195,0,0,1-.368,1.406" fill="#000" fill-opacity="0.4"></path>
+                                    <path d="M64,13.538,62.573,9.307H60.9l2.267,5.976a2.242,2.242,0,0,1-.4.822.99.99,0,0,1-.814.323,3.536,3.536,0,0,1-.667-.073l.14,1.234a4.151,4.151,0,0,0,.892.095,3.1,3.1,0,0,0,.805-.095,1.9,1.9,0,0,0,.6-.266,1.757,1.757,0,0,0,.432-.447,4.206,4.206,0,0,0,.395-.8l.376-1.038,2.1-5.735H65.389Z" fill="#000" fill-opacity="0.4"></path>
+                                  </g>
+                                </svg>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="el_footer_company">
+                        <div class="cont">
+                          <ul class="el_footer_list d-flex list-unstyled mb-0">
+                            <li>公司名稱: 密斯特喬有限公司</li>
+                            <li>統一編號: 47098433</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <hr>
-  <section id="scontent">
-    <div class="container-fluid">
-      <div id="aboutme" class="row text-center">
-        <div class="col-md-2"><img src="./images/Qrcode02.png" alt="QRCODE" class="img-fluid mx-auto"></div>
-        <div class="col-md-2">
-          <i class="fas fa-thumbs-up fa-5x"></i>
-          <h3>關於我們</h3>
-          關於我們<br>
-          企業官網<br>
-          招商專區<br>
-          人才招募<br>
-        </div>
-        <div class="col-md-2">
-          <i class="fas fa-truck fa-5x"></i>
-          <h3>特色服務</h3>
-          特色服務<br>
-          大宗採購方案<br>
-          直配大陸<br>
-        </div>
-        <div class="col-md-2">
-          <i class="fas fa-users fa-5x"></i>
-          <h3>客戶服務</h3>
-          客戶服務<br>
-          訂單/配送進度查詢<br>
-          取消訂單/退貨<br>
-          更改配送地址<br>
-          追蹤清單<br>
-          12H速達服務<br>
-          折價券說明<br>
-        </div>
-        <div class="col-md-2">
-          <i class="fas fa-comments-dollar fa-5x"></i>
-          <h3>好康大放送</h3>
-          好康大放送<br>
-          新會員禮包<br>
-          活動得獎名單<br>
-        </div>
-        <div class="col-md-2">
-          <i class="fas fa-question fa-5x"></i>
-          <h3>FAQ 常見問題</h3>
-          FAQ 常見問題<br>
-          系統使用問題<br>
-          產品問題資詢<br>
-          大宗採購問題<br>
-          聯絡我們<br>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="footer">
-    <div class="container-fluid">
-      <div id="last-data" class="row text-center">
-        <div class="col-md-12">
-          <h6>中彰投分署科技股份有限公司 40767台中市西屯區工業區一路100號 電話：04-23592181 免付費電話：0800-777888</h6>
-          <h6>企業通過ISO/IEC27001認證，食品業者登錄字號：A-127360000-00000-0</h6>
-          <h6>版權所有 copyright © 2017 WDA.com Inc. All Rights Reserved.</h6>
-        </div>
-      </div>
-    </div>
-  </section>
+  </footer>
 
+  <section id="scontent"></section>
+  <section id="footer"></section>
 
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
 </body>
 
 </html>
-
-<?php
-$db_link->close();
-?>
